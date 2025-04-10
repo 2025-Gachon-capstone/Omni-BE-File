@@ -18,7 +18,7 @@ ENV PROFILE=${PROFILE}
 RUN mkdir /Omni-BE-File
 WORKDIR /Omni-BE-File
 
-COPY --from=builder /Omni-BE-File/build/libs/Omni-BE-Payment-* /Omni-BE-File/app.jar
+COPY --from=builder /Omni-BE-File/build/libs/Omni-BE-File-* /Omni-BE-File/app.jar
 
 CMD ["sh", "-c", " \
     java -Dspring.profiles.active=${PROFILE} \
