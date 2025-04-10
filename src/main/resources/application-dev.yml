@@ -1,3 +1,14 @@
 spring:
   application:
     name: Omni-BE-File
+
+cors:
+  urls:
+    httpsGatewayURL: ${HTTPS_GATEWAY_URL}
+
+springdoc:
+  api-docs:
+    path: ${FILE_SWAGGER_PATH}
+  swagger-ui:
+    path: ${FILE_SWAGGER_PATH}
+
