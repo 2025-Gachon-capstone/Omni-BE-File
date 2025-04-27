@@ -2,9 +2,10 @@ spring:
   application:
     name: Omni-BE-File
 
-cors:
-  urls:
-    httpsGatewayURL: ${HTTPS_GATEWAY_URL}
+  cloud:
+    gcp:
+      storage:
+        bucket: ${GCP_STORAGE_BUCKET}
 
 springdoc:
   api-docs:
