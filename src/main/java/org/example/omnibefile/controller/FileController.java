@@ -19,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/file")
 @RequiredArgsConstructor
 public class FileController {
-    FileUploadService fileUploadService;
+    private final FileUploadService fileUploadService;
 
     @PostMapping(value ="/upload", consumes = "multipart/form-data")
     @Operation(summary = "이미지 등 파일 업로드 API",description = "이미지 등 파일 업로드를 위한 Api입니다.",tags = "File")
