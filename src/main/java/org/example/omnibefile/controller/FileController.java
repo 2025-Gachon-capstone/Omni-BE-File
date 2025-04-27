@@ -21,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileController {
     FileUploadService fileUploadService;
 
-    @PostMapping("/upload")
+    @PostMapping(value ="/upload", consumes = "multipart/form-data")
     @Operation(summary = "이미지 등 파일 업로드 API",description = "이미지 등 파일 업로드를 위한 Api입니다.",tags = "File")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "COMMON200-성공",content = @Content(schema = @Schema(implementation = FileUploadResponseDto.class))),
