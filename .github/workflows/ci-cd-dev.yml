@@ -79,9 +79,9 @@ jobs:
             -X POST \
             -d "{
               \"content\": \"${STATUS} \n\
-              \`Repository\`: \`${{ github.repository }}\`\n\
-              \`Branch\`: \`dev\`\n\
-              \`Run Attempt\`: \`${{ github.run_attempt }}\`\n\
-              \`Commit\`: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}>\"
+              \`1. Repository\`: \`${{ github.repository }}\`\n\
+              \`2. Run Branch\`: \`dev\`\n\
+              \`3. Run Attempt\`: \`${{ github.run_attempt }}\`\n\
+              \`4. Commit\`: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}>\"
               }" \
               ${{ secrets.ORG_DISCORD_WEBHOOK_URL }}
