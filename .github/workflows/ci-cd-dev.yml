@@ -78,10 +78,10 @@ jobs:
           curl -H "Content-Type: application/json" \
             -X POST \
             -d "{
-              \"content\": \"${STATUS} 🎉\n\
-              📦 Repository: \`${{ github.repository }}\`\n\
-              🌿 Branch: \`dev\`\n\
-              🔁 Run Attempt: \`${{ github.run_attempt }}\`\n\
-              🔗 Commit: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}>\"
+              \"content\": \"${STATUS} \n\
+              \`Repository\`: \`${{ github.repository }}\`\n\
+              \`Branch\`: \`dev\`\n\
+              \`Run Attempt\`: \`${{ github.run_attempt }}\`\n\
+              \`Commit\`: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}>\"
               }" \
               ${{ secrets.ORG_DISCORD_WEBHOOK_URL }}
