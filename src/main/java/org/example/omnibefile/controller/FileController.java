@@ -26,6 +26,7 @@ public class FileController {
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "COMMON200-성공",content = @Content(schema = @Schema(implementation = FileUploadResponseDto.class))),
     })
+
     public ResponseEntity<FileUploadResponseDto> uploadFile(
             @RequestParam("file") MultipartFile file
     ) {
